@@ -11,6 +11,11 @@
 		6916311A28910D2C004F1EBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6916311928910D2C004F1EBD /* ContentView.swift */; };
 		6916311C28910D31004F1EBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6916311B28910D31004F1EBD /* Assets.xcassets */; };
 		6916311F28910D31004F1EBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6916311E28910D31004F1EBD /* Preview Assets.xcassets */; };
+		6916312728910DC2004F1EBD /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6916312628910DC2004F1EBD /* HomeScreen.swift */; };
+		6916312A28911008004F1EBD /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6916312928911008004F1EBD /* ContentViewController.swift */; };
+		6916312D28913370004F1EBD /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6916312C28913370004F1EBD /* NavigationHelper.swift */; };
+		69163130289233C1004F1EBD /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6916312F289233C1004F1EBD /* UserService.swift */; };
+		6916313228923739004F1EBD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6916313128923739004F1EBD /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		6916311928910D2C004F1EBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6916311B28910D31004F1EBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6916311E28910D31004F1EBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6916312628910DC2004F1EBD /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		6916312928911008004F1EBD /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		6916312C28913370004F1EBD /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
+		6916312F289233C1004F1EBD /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		6916313128923739004F1EBD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,10 @@
 		6916311628910D2C004F1EBD /* HelloSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				6916312E28923004004F1EBD /* services */,
+				6916312B28913337004F1EBD /* helpers */,
+				6916312828910FEC004F1EBD /* controllers */,
+				6916312528910DA6004F1EBD /* screens */,
 				6916311728910D2C004F1EBD /* HelloSwiftUIApp.swift */,
 				6916311928910D2C004F1EBD /* ContentView.swift */,
 				6916311B28910D31004F1EBD /* Assets.xcassets */,
@@ -65,6 +79,39 @@
 				6916311E28910D31004F1EBD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6916312528910DA6004F1EBD /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				6916312628910DC2004F1EBD /* HomeScreen.swift */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		6916312828910FEC004F1EBD /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6916312928911008004F1EBD /* ContentViewController.swift */,
+				6916313128923739004F1EBD /* HomeViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		6916312B28913337004F1EBD /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6916312C28913370004F1EBD /* NavigationHelper.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		6916312E28923004004F1EBD /* services */ = {
+			isa = PBXGroup;
+			children = (
+				6916312F289233C1004F1EBD /* UserService.swift */,
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +184,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6916312A28911008004F1EBD /* ContentViewController.swift in Sources */,
+				6916312D28913370004F1EBD /* NavigationHelper.swift in Sources */,
+				6916313228923739004F1EBD /* HomeViewController.swift in Sources */,
+				69163130289233C1004F1EBD /* UserService.swift in Sources */,
 				6916311A28910D2C004F1EBD /* ContentView.swift in Sources */,
+				6916312728910DC2004F1EBD /* HomeScreen.swift in Sources */,
 				6916311828910D2C004F1EBD /* HelloSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +319,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HelloSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = BC8ACC6KSK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -295,6 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HelloSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = BC8ACC6KSK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
