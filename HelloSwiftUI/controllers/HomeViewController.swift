@@ -9,10 +9,16 @@ import Foundation
 
 class HomeViewController: ObservableObject {
     @Published var userList: [User] = [];
+    @Published var loadingCenter: Bool = false;
     
     func fetchUserList() {
+        self.loadingCenter = true;
         UserSerivce().getUserList() { data in
-            self.userList = data
+            DispatchQueue.main.async {
+                self.userList = data
+                self.loadingCenter = false
+            }
         };
+        
     }
 }
