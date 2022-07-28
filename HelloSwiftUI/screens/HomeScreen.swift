@@ -14,14 +14,25 @@ struct HomeScreenView: View {
     
     var body: some View {
         VStack {
-            Text("Hello, world!")
-                .padding()
+            List(self.homeViewController.userList, id:\.id) { user in
+                HStack {
+                    AsyncImage(url: URL(string: user.avatar), scale: 2.5)
+                        .border(Color.gray, width: 1.0)
+                        .scaledToFit()
+                        .frame(width: 50, height: 50)
+                    Spacer().frame(width: 24)
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("\(user.name)").fontWeight(.bold)
+                        Text("\(user.createdAt)").font(.system(size: 10))
+                    }
+                }.padding(20)
+            }
         }.onAppear {
             homeViewController.fetchUserList()
         }.navigationBarBackButtonHidden(true)
             .navigationBarHidden(true)
             .navigationBarItems(leading: Button("Back"){ dismiss() })
-            
+        
     }
 }
 

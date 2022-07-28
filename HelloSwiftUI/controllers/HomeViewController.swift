@@ -8,9 +8,11 @@
 import Foundation
 
 class HomeViewController: ObservableObject {
+    @Published var userList: [User] = [];
+    
     func fetchUserList() {
-        UserSerivce().getUserList() { data in  // <--- here
-            print(">>>>>>>> \(data)") // print when all work is done
+        UserSerivce().getUserList() { data in
+            self.userList = data
         };
     }
 }
